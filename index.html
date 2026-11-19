@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Screen 1: Intro -->
+<div class="screen active" id="screen1">
+  <h1>Ek chhota sa surprise... 🎁</h1>
+  <p class="message">Kuch special tumhare liye ready hai, Sazia!</p>
+  <button class="btn" onclick="startCountdown()">Click Karo ✨</button>
+</div>
+
+<!-- Screen 2: Countdown -->
+<div class="screen" id="screen2">
+  <div id="countdown">3</div>
+</div>
+
+<!-- Screen 3: Birthday -->
+<div class="screen" id="screen3">
+  <div class="cake">🎂</div>
+  <h1>Happy Birthday Sazia! 🎉</h1>
+  <p class="message">
+    Janamdin Mubarak ho Sazia! 🥳<br>
+    Allah tumhe hamesha khush rakhe,<br>
+    tumhari har dua poori ho.<br>
+    Aaj ka din tumhare liye bahut special ho! ✨
+  </p>
+  <button class="btn" onclick="extraSurprise()">Ek aur surprise 🎁</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.screen { display: none; padding: 20px; }
+.screen.active { display: block; animation: fadeIn 0.8s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Countdown */
+#countdown {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 30px #ffd700;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* Button */
+.btn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff6b9d, #ffd700);
+  color: #1a1a2e;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 107, 157, 0.6);
+  transition: transform 0.2s;
+}
+
+.btn:hover { transform: scale(1.08); }
+
+/* Heading */
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ffd700, #ff6b9d, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+}
+
+/* Message */
+.message {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f0e6ff;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cake */
+.cake {
+  font-size: 5rem;
+  margin: 20px 0;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: fall linear forwards;
+  z-index: 999;
+}
+
+@keyframes fall {
+  to { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+
+/* Balloons */
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  font-size: 2.5rem;
+  animation: floatUp linear forwards;
+  z-index: 998;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-120vh); opacity: 0; }
+}
